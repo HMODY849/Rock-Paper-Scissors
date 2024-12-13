@@ -40,7 +40,7 @@ h1{
     color: white;
     font-weight: bold;
     font-size: 18px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     width: 320px;
     margin: 0 auto;
     height: 80px;
