@@ -152,7 +152,7 @@ function getComputerChoice (){
            
         }else if(computerScore==5){
             roundResult.innerHTML=" "
-            Congratulation.innerHTML='Game over you lose';
+            Congratulation.innerHTML='Game over you lose ';
             Congratulation.classList.remove("Gameover");
             buttonPlayAgain.classList.remove("Gameover");
             finalresult.classList.add("Gameover");
