@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/bk2.jpg);
+}
+
+/* here is css for tag element */
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+/* here is css for class and id element */
+
+.playground{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.resultScreen{
+    align-content: center;
+}
+.choicePic{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.result{
+    display: flex;
+    gap: 2em;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid white;
+    width: 320px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.board{
+    margin: 0 auto;
+}
+
+.itemHuman, .itemComputer{
+    border: 2px solid white;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.userSide{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 20px;
+}
+
+
+.finalResult{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+
+.Gameover{
+    display: none;
+}
+
+.playagin{
+    width: 100px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.finalShoot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 426px) {
+    .userSide{
+        gap: 0em;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    .itemHuman, .itemComputer{
+        width: 100px;
+        height: 100px;
+    }
+    .result{
+    font-size: 12px;
+    width: 220px;
+    height: 30px;
+}
+    p{
+        margin: 0;
+    }
+    }
