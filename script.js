@@ -18,6 +18,14 @@ let finalresult = document.querySelector(".choicePic");
 let Congratulation = document.querySelector(".finalResult");
 let buttonPlayAgain = document.querySelector(".playagin");
 
+const audioImg = new Audio("./audio/click.mp3");
+let img = document.querySelectorAll("img");
+img.forEach(img => {
+    img.addEventListener("click", () => {
+      audioImg.play();
+    });
+  });
+
 rock1.addEventListener("click",function(){
     human=x;
     playRound();
@@ -119,7 +127,8 @@ function getComputerChoice (){
                     return roundResult.innerHTML="You Win";
                 }
     }
-
+    let audio = new Audio("./audio/win1.mp3");
+    let audio1 = new Audio("./audio/lose3.mp3");
     function playAgain(){
         let playagain1 = document.querySelector(".playagin");
         playagain1.addEventListener("click", function(){
@@ -129,6 +138,10 @@ function getComputerChoice (){
             resultRound2.innerHTML=`${computerScore}`
             itemHuman.innerHTML=``
             itemComputer.innerHTML=``
+            audio.pause();
+            audio.currentTime = 0;
+            audio1.pause();
+            audio1.currentTime = 0;
             Congratulation.classList.add("Gameover");
             buttonPlayAgain.classList.add("Gameover");
             finalresult.classList.remove("Gameover")
@@ -148,6 +161,7 @@ function getComputerChoice (){
             paper1.classList.add("Gameover");
             rock1.classList.add("Gameover");
             scissor1.classList.add("Gameover");
+            audio.play();
             playAgain();
            
         }else if(computerScore==5){
@@ -159,6 +173,7 @@ function getComputerChoice (){
             paper1.classList.add("Gameover");
             rock1.classList.add("Gameover");
             scissor1.classList.add("Gameover");
+            audio1.play();
             playAgain();
         }
     }
